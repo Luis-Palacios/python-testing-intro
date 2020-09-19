@@ -9,7 +9,7 @@
 # 1, 2, 'fizz', 4, 'buzz', 6...., 'fizzbuzz'
 # y cree pruebas unitarias para validar el programa
 
-from utils.fizzbuzz import fizz_or_buzz, fizzbuzz_sequence
+from utils.fizzbuzz import fizzbuzz_sequence
 
 limit = 15
 result = fizzbuzz_sequence(limit)
