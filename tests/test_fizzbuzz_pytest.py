@@ -2,28 +2,12 @@ import pytest
 from utils.fizzbuzz import fizz_or_buzz, fizzbuzz_sequence
 
 
-def test_fizz_or_buzz_number():
-    number = 1
+@pytest.mark.parametrize(
+    "number,expected", [(1, 1), (3, "fizz"), (5, "buzz"), (15, "fizzbuzz")]
+)
+def test_fizz_or_buzz(number, expected):
     result = fizz_or_buzz(number)
-    assert number == result
-
-
-def test_fizz_or_buzz_fizz():
-    number = 3
-    result = fizz_or_buzz(number)
-    assert result == "fizz"
-
-
-def test_fizz_or_buzz_buzz():
-    number = 5
-    result = fizz_or_buzz(number)
-    assert result == "buzz"
-
-
-def test_fizz_or_buzz_fizzbuzz():
-    number = 15
-    result = fizz_or_buzz(number)
-    assert result == "fizzbuzz"
+    assert result == expected
 
 
 def test_fizzbuzz_secuence():
